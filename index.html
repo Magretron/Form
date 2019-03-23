@@ -1,0 +1,82 @@
+<link rel="stylesheet" href="styles.css">
+<h1 id="title">Magretron order form</h1>
+<div id="form-outer">
+  <p id="description">
+    Fill out the order form
+  </p>
+  <form id="survey-form" method="GET" action="">
+    <div class="rowTab">
+      <div class="labels">
+        <label id="name-label" for="name">* Company name: </label>
+      </div>
+      <div class="rightTab">
+        <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter company name" required>
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label id="email-label" for="email">* Email: </label>
+      </div>
+      <div class="rightTab">
+        <input type="email" name="email" id="email" class="input-field" required placeholder="Enter your Email">
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label id="number-label" for="power">* Boiler power, kWt: </label>
+      </div>
+      <div class="rightTab">
+        <input type="number" name="power" id="number" min="100" max="10000" step="50" class="input-field" placeholder="Boiler power in kWt">
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="currentPos">Your position in the company</label>
+      </div>
+      <div class="rightTab">
+        <select id="dropdown" name="currentPos" class="dropdown">
+          <option disabled value>Select an option</option>
+          <option  value="owner">Owner</option>
+          <option value="president">President</option>
+          <option value="director">Director</option>
+          <option value="engineer">Chief Power Engineer</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="userRating">* Are you ordering a magretron for the first time?</label>
+      </div>
+      <div class="rightTab">
+        <ul style="list-style: none;">
+          <li class="radio"><label>First time<input name="radio-buttons" value="1"  type="radio" class="userRatings" checked></label></li>
+          <li class="radio"><label>Repeatedly<input name="radio-buttons" value="2"  type="radio" class="userRatings" ></label></li>
+          <li class="radio"><label>I am your regular customer<input name="radio-buttons" value="3"  type="radio" class="userRatings" ></label></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="preferences">Additional order options<br>(Check all that apply): </label>
+      </div>
+      <div class="rightTab">
+        <ul id="preferences" style="list-style: none;">
+          <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">Provide documentation</label></li>
+          <li class="checkbox"><input name="prefer" value="2" type="checkbox" class="userRatings">Object survey</li>
+          <li class="checkbox"><label><input name="prefer" value="3" type="checkbox" class="userRatings">Assembly work</label></li>
+          <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" class="userRatings">Installment payment</label></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rowTab">
+      <div class="labels">
+        <label for="comments">Comments on the order</label>
+      </div>
+      <div class="rightTab">
+        <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Enter your comment here..."></textarea>
+      </div>
+    </div>
+    <button id="submit" type="submit">Submit</button>
+  </form>
+</div>
